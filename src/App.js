@@ -1,24 +1,57 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+// Conteiners
+import {Select} from './containers/Select';
+import {Preview} from './containers/Preview';
+
+const listnames = ['text', 'password', "checkbox", "radio", "range"];
 
 function App() {
+  const [selectV, setSelectV] = React.useState(listnames[0])
+  const [valueInput, setvalueInput] = React.useState('')
+  const getSelectV = value => setSelectV(value)
+  const getvalueInput = value => setvalueInput(value)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="block">
+        <div>
+      <div >
+          <Select
+           getvalueInput={getvalueInput} 
+           getSelectV={getSelectV} 
+          listnames={listnames}
+           selectV={selectV} 
+           valueInput={valueInput} />
+        </div>
+        <div >
+          <Select
+           getvalueInput={getvalueInput} 
+           getSelectV={getSelectV} 
+          listnames={listnames}
+           selectV={selectV} 
+           valueInput={valueInput} />
+        </div>
+        <div >
+          <Select
+           getvalueInput={getvalueInput} 
+           getSelectV={getSelectV} 
+          listnames={listnames}
+           selectV={selectV} 
+           valueInput={valueInput} />
+        </div>
+        <div >
+          <Select
+           getvalueInput={getvalueInput} 
+           getSelectV={getSelectV} 
+          listnames={listnames}
+           selectV={selectV} 
+           valueInput={valueInput} />
+        </div>
+        </div>
+      </div>
+      <div className="block">
+        <Preview />
+      </div>
     </div>
   );
 }
