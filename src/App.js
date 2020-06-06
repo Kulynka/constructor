@@ -1,57 +1,23 @@
 import React from 'react';
 import './App.css';
-// Conteiners
-import {Select} from './containers/Select';
-import {Preview} from './containers/Preview';
-
-const listnames = ['text', 'password', "checkbox", "radio", "range"];
+// Components
+import { Config } from './components/Config'
+import { Preview } from './components/Preview'
 
 function App() {
-  const [selectV, setSelectV] = React.useState(listnames[0])
-  const [valueInput, setvalueInput] = React.useState('')
-  const getSelectV = value => setSelectV(value)
-  const getvalueInput = value => setvalueInput(value)
-  return (
+  const [listComponents, setListComponents] = React.useState([{type: '', value: '', options: [0], id: new Date().getTime(), default: 'default' }]);
+  //Callback for update listComponents (useState);
+  const getListComponents = value => setListComponents(value)
+    return (
     <div className="App">
-      <div className="block">
-        <div>
-      <div >
-          <Select
-           getvalueInput={getvalueInput} 
-           getSelectV={getSelectV} 
-          listnames={listnames}
-           selectV={selectV} 
-           valueInput={valueInput} />
+        <div className='Block'>
+            <h3>Components Config</h3>
+            <Config listComponents={listComponents} getListComponents={getListComponents} />
         </div>
-        <div >
-          <Select
-           getvalueInput={getvalueInput} 
-           getSelectV={getSelectV} 
-          listnames={listnames}
-           selectV={selectV} 
-           valueInput={valueInput} />
+        <div className='Block'>
+            <h3>Components Preview</h3>
+            <Preview listComponents={listComponents} />
         </div>
-        <div >
-          <Select
-           getvalueInput={getvalueInput} 
-           getSelectV={getSelectV} 
-          listnames={listnames}
-           selectV={selectV} 
-           valueInput={valueInput} />
-        </div>
-        <div >
-          <Select
-           getvalueInput={getvalueInput} 
-           getSelectV={getSelectV} 
-          listnames={listnames}
-           selectV={selectV} 
-           valueInput={valueInput} />
-        </div>
-        </div>
-      </div>
-      <div className="block">
-        <Preview />
-      </div>
     </div>
   );
 }

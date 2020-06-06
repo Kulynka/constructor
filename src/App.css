@@ -1,10 +1,101 @@
 .App {
   display: flex;
+  text-align: center;
 }
-.block {
-  display: flex;
-  justify-content: center;
+.Block {
   width: 50%;
-  padding: 10px;
+  padding: 20px;
+  border: 1px solid #61dafb;
+  margin: 20px;
 }
-
+.Select {
+  min-width: 220px;
+  background: #be4d10;
+  color: aliceblue;
+  height: 40px;
+  font-size: 18px;
+  padding: 2px 4px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 12px;
+  margin-right: 12px;
+}
+.Input {
+  min-width: 220px;
+  background: #be4d10;
+  color: aliceblue;
+  height: 33px;
+  font-size: 18px;
+  padding: 2px 4px;
+  outline: none;
+  border-radius: 12px;
+  margin-right: 12px;
+}
+.Input::-webkit-input-placeholder {
+  color: #a19f9f;
+}
+.Input::-moz-placeholder{
+  color: #a19f9f;
+}
+.Flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 12px;
+}
+.Btn{
+  min-width: 60px;
+  background: #88380f;
+  color: aliceblue;
+  height: 33px;
+  font-size: 18px;
+  padding: 2px 4px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 12px;
+}
+.BtnRemove{
+  background: #930f1b;
+}
+.Option{
+  min-width: 60px;
+  background: #88380f;
+  color: aliceblue;
+  height: 33px;
+  font-size: 18px;
+  padding: 2px 4px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 12px;
+  margin-right: 12px;
+}
+.Button {
+  border-radius: 12px;
+  min-width: 220px;
+  background: #88380f;
+  color: aliceblue;
+  height: 33px;
+  font-size: 18px;
+  padding: 2px 4px;
+  outline: none;
+  margin-top: 20px;
+  margin-right: 12px;
+  cursor: pointer;
+}
+.Reset {
+  width: 120px;
+  border-radius: 12px;
+  background: #930f1b;
+  color: aliceblue;
+  height: 33px;
+  font-size: 18px;
+  padding: 2px 4px;
+  outline: none;
+  margin-top: 20px;
+  margin-right: 12px;
+  cursor: pointer;
+}
+.Label {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
